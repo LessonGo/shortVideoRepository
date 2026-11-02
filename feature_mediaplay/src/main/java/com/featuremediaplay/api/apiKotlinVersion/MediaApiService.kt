@@ -37,15 +37,15 @@ interface MediaApiService {
 
     @GET(NetAddress.VIDEO_INFO_ADDRESS)
     //请求视频信息
-    suspend fun getVideoInfo(@Query("id") id: String, @Header("token") token: String): ResBase<ResVideoAllInfo>
+    suspend fun getVideoInfo(@Query("id") id: String, @Header("token") token: String?): ResBase<ResVideoAllInfo>
 
     @POST(NetAddress.VIDEO_LIKE)
     //点赞
-    suspend fun Like(@Header("token") token: String, @Body body: LikeAddBody): ResLike
+    suspend fun Like(@Header("token") token: String?, @Body body: LikeAddBody): ResLike
 
     @POST(NetAddress.VIDEO_CANCEL_LIKE)
     //取消点赞
-    suspend fun cancelLike(@Header("token") token: String, @Body body: CancelBody): ResBase<Any>
+    suspend fun cancelLike(@Header("token") token: String?, @Body body: CancelBody): ResBase<Any>
 
     @POST(NetAddress.VIDEO_ADD_COLLECTION)
     //添加收藏
@@ -54,21 +54,21 @@ interface MediaApiService {
     @POST(NetAddress.VIDEO_CANCEL_COLLECTION)
     // 取消收藏
     suspend fun cancelCollection(
-        @Header("token") token: String,
+        @Header("token") token: String?,
         @Body body: CancelBody
     ): ResBase<Any>
 
     @POST(NetAddress.VIDEO_COMMENT)
     // 评论
     suspend fun sendComment(
-        @Header("token") token: String,
+        @Header("token") token: String?,
         @Body body: CommentBody
     ): ResBase<ResAddComment>
 
     @GET(NetAddress.GET_COMMENT_LIST)
     // 获取评论列表
     suspend fun getCommentList(
-        @Header("token") token: String,
+        @Header("token") token: String?,
         @Query("aid") aid: Int,
         @Query("page") page: Int
     ): ResBase<ResList<ResComment>>
@@ -76,14 +76,14 @@ interface MediaApiService {
     @POST(NetAddress.DELETE_COMMENT)
     // 删除评论
     suspend fun deleteComment(
-        @Header("token") token: String,
+        @Header("token") token: String?,
         @Body body: DeleteCmdBody
     ): ResBase<Any>
 
     @GET(NetAddress.GET_CATEGORY_VIDEO_LIST)
     // 获取分类视频列表
     suspend fun getCategoryVideoList(
-        @Header("token") token: String,
+        @Header("token") token: String?,
         @Query("channel_id") channelId: Int,
         @Query("page") page: Int,
         @Query("limit") limit: Int,
@@ -103,7 +103,7 @@ interface MediaApiService {
     @GET(NetAddress.COLLECTION_LIST)
     // 获取收藏列表
     suspend fun getCollectionList(
-        @Header("token") token: String,
+        @Header("token") token: String?,
         @Query("page") page: Int
     ): ResBase<ResCollection>
 }

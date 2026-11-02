@@ -80,6 +80,10 @@
 # 保留通过反射调用的类和方法
 -keep class com.example.demo20shvideoproject.** { *; }  # 替换为你的主包名
 
+# Gson 反序列化依赖字段名匹配 JSON，R8 混淆字段名会导致解析全部失败
+# 保留所有模块的 bean 类（video_data/network/library_base/piazza/find 等）
+-keep class **.bean.** { *; }
+
 
 
 

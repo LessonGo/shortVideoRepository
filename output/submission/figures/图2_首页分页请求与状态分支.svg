@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1900" viewBox="0 0 2200 1900"><rect width="100%" height="100%" fill="white"/>
+<text x="1100" y="40.0" font-family="SimHei,serif" font-size="40" text-anchor="middle" dominant-baseline="central">首页推荐与日报的分页处理流程</text>
+<rect x="130" y="100" width="550" height="110" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="405.0" y="136.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">首次进入 / 下拉刷新</text>
+<text x="405.0" y="173.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">isFirst = true，mPage = 1</text>
+<rect x="950" y="100" width="550" height="110" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1225.0" y="136.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">上拉加载更多</text>
+<text x="1225.0" y="173.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">isFirst = false，mPage++</text>
+<polyline points="405,210 405,245 800,245 800,285" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,285 793.8835932041064,271.30366589531536 806.1164067958936,271.30366589531536" fill="#222"/>
+<polyline points="1225,210 1225,245 800,245" fill="none" stroke="#222" stroke-width="1.5"/>
+<rect x="470" y="285" width="660" height="130" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="800.0" y="312.3" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">VideoListModel.requestDatas</text>
+<text x="800.0" y="350.0" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">按列表类型调用 getRecommend / getDaily</text>
+<text x="800.0" y="387.7" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">参数：page，limit = 10</text>
+<polyline points="800,415 800,475" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,475 793.8835932041064,461.30366589531536 806.1164067958936,461.30366589531536" fill="#222"/>
+<polyline points="800,475.0 1060.0,555 800,635.0 540.0,555 800,475.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,475.0 1060.0,555 800,635.0 540.0,555" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="800" y="536.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">HTTP 与业务响应正常？</text>
+<text x="800" y="573.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">code = 1</text>
+<polyline points="800,635 800,700" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,700 793.8835932041064,686.3036658953154 806.1164067958936,686.3036658953154" fill="#222"/>
+<rect x="813.0" y="655.25" width="34.0" height="29.5" fill="white"/>
+<text x="830" y="670.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">是</text>
+<polyline points="1060,555 1925,555 1925,700" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1925,700 1918.8835932041065,686.3036658953154 1931.1164067958935,686.3036658953154" fill="#222"/>
+<rect x="1106.5" y="515.0" width="177.0" height="30.0" fill="white"/>
+<text x="1195" y="530.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">否 / 网络失败</text>
+<polyline points="800,700.0 1060.0,785 800,870.0 540.0,785 800,700.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,700.0 1060.0,785 800,870.0 540.0,785" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="800" y="785.0" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">返回列表是否非空？</text>
+<rect x="1675" y="700" width="500" height="160" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1925.0" y="743.6" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">错误或空数据回调</text>
+<text x="1925.0" y="780.0" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">GetFailed(errorCode)</text>
+<text x="1925.0" y="816.4" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">更新 mErrorCode，显示状态页</text>
+<polyline points="1060,785 1675,785" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1675,785 1661.3036658953154,791.1164067958936 1661.3036658953154,778.8835932041064" fill="#222"/>
+<rect x="1113.0" y="745.25" width="34.0" height="29.5" fill="white"/>
+<text x="1130" y="760.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">否</text>
+<polyline points="1925,860 1925,950" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1925,950 1918.8835932041065,936.3036658953154 1931.1164067958935,936.3036658953154" fill="#222"/>
+<rect x="1705" y="950" width="440" height="90" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1925.0" y="995.0" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">本次请求失败 / 无内容</text>
+<polyline points="800,870 800,930" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,930 793.8835932041064,916.3036658953154 806.1164067958936,916.3036658953154" fill="#222"/>
+<rect x="813.0" y="885.25" width="34.0" height="29.5" fill="white"/>
+<text x="830" y="900.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">是</text>
+<polyline points="800,930.0 1050.0,1010 800,1090.0 550.0,1010 800,930.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,930.0 1050.0,1010 800,1090.0 550.0,1010" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="800" y="1010.0" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">isFirst 是否为 true？</text>
+<polyline points="550,1010 350,1010 350,1150" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="350,1150 343.88359320410643,1136.3036658953154 356.11640679589357,1136.3036658953154" fill="#222"/>
+<rect x="428.0" y="968.25" width="34.0" height="29.5" fill="white"/>
+<text x="445" y="983.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">是</text>
+<polyline points="1050,1010 1250,1010 1250,1150" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1250,1150 1243.8835932041065,1136.3036658953154 1256.1164067958935,1136.3036658953154" fill="#222"/>
+<rect x="1133.0" y="968.25" width="34.0" height="29.5" fill="white"/>
+<text x="1150" y="983.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">否</text>
+<rect x="100" y="1150" width="500" height="110" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="350.0" y="1186.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">刷新 / 首次加载</text>
+<text x="350.0" y="1223.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">mData = 本页结果</text>
+<rect x="1000" y="1150" width="500" height="110" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1250.0" y="1186.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">加载更多</text>
+<text x="1250.0" y="1223.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">原列表 addAll(本页列表)</text>
+<polyline points="350,1260 350,1310 800,1310 800,1355" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,1355 793.8835932041064,1341.3036658953154 806.1164067958936,1341.3036658953154" fill="#222"/>
+<polyline points="1250,1260 1250,1310 800,1310" fill="none" stroke="#222" stroke-width="1.5"/>
+<polyline points="800,1355.0 1125.0,1445 800,1535.0 475.0,1445 800,1355.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,1355.0 1125.0,1445 800,1535.0 475.0,1445" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="800" y="1445.0" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">已加载条数 ≥ 服务端 count？</text>
+<polyline points="475,1445 320,1445 320,1620" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="320,1620 313.88359320410643,1606.3036658953154 326.11640679589357,1606.3036658953154" fill="#222"/>
+<rect x="378.0" y="1402.25" width="34.0" height="29.5" fill="white"/>
+<text x="395" y="1417.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">是</text>
+<polyline points="1125,1445 1280,1445 1280,1620" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1280,1620 1273.8835932041065,1606.3036658953154 1286.1164067958935,1606.3036658953154" fill="#222"/>
+<rect x="1188.0" y="1402.25" width="34.0" height="29.5" fill="white"/>
+<text x="1205" y="1417.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">否</text>
+<rect x="90" y="1620" width="460" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="320.0" y="1651.8" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">enableLoadMore = false</text>
+<text x="320.0" y="1688.2" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">禁止继续加载</text>
+<rect x="1050" y="1620" width="460" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1280.0" y="1651.8" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">保留加载更多能力</text>
+<text x="1280.0" y="1688.2" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">等待下一次上拉</text>
+<polyline points="320,1720 320,1760 800,1760 800,1790" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="800,1790 793.8835932041064,1776.3036658953154 806.1164067958936,1776.3036658953154" fill="#222"/>
+<polyline points="1280,1720 1280,1760 800,1760" fill="none" stroke="#222" stroke-width="1.5"/>
+<rect x="390" y="1790" width="820" height="70" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="800.0" y="1825.0" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">LiveData 通知列表刷新，并结束成功请求的加载动画</text>
+</svg>

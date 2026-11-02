@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1890" viewBox="0 0 2000 1890"><rect width="100%" height="100%" fill="white"/>
+<text x="950" y="40.0" font-family="SimHei,serif" font-size="40" text-anchor="middle" dominant-baseline="central">视频详情、播放与浏览记录处理流程</text>
+<rect x="600" y="95" width="700" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="950.0" y="125.5" font-family="SimSun,serif" font-size="30" text-anchor="middle" dominant-baseline="central">点击视频卡片 → ARouter 跳转</text>
+<text x="950.0" y="164.5" font-family="SimSun,serif" font-size="30" text-anchor="middle" dominant-baseline="central">播放页接收 video_id</text>
+<polyline points="950,195 950,255" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="950,255 943.8835932041064,241.30366589531536 956.1164067958936,241.30366589531536" fill="#222"/>
+<rect x="600" y="255" width="700" height="110" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="950.0" y="291.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">播放页调用 ViewModel.requestVideoInfo</text>
+<text x="950.0" y="328.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">viewModelScope 发起详情请求</text>
+<polyline points="950,365 950,425" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="950,425 943.8835932041064,411.30366589531536 956.1164067958936,411.30366589531536" fill="#222"/>
+<rect x="600" y="425" width="700" height="110" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="950.0" y="461.15" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">Model → ApiService → 远程详情接口</text>
+<text x="950.0" y="498.85" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">携带 id 与可空 token</text>
+<polyline points="950,535 950,590" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="950,590 943.8835932041064,576.3036658953154 956.1164067958936,576.3036658953154" fill="#222"/>
+<polyline points="950,590.0 1225.0,675 950,760.0 675.0,675 950,590.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="950,590.0 1225.0,675 950,760.0 675.0,675" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="950" y="675.0" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">返回 Success 且有详情？</text>
+<polyline points="1225,675 1540,675" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1540,675 1526.3036658953154,681.1164067958936 1526.3036658953154,668.8835932041064" fill="#222"/>
+<rect x="1294.75" y="631.75" width="170.5" height="28.5" fill="white"/>
+<text x="1380" y="646.0" font-family="SimSun,serif" font-size="25" text-anchor="middle" dominant-baseline="central">Empty / Error</text>
+<rect x="1540" y="610" width="310" height="130" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1695.0" y="657.45" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">提示无数据或错误</text>
+<text x="1695.0" y="692.55" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">结束本次加载</text>
+<polyline points="950,760 950,815" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="950,815 943.8835932041064,801.3036658953154 956.1164067958936,801.3036658953154" fill="#222"/>
+<rect x="963.0" y="775.25" width="34.0" height="29.5" fill="white"/>
+<text x="980" y="790.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">是</text>
+<rect x="600" y="815" width="700" height="115" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="950.0" y="853.65" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">ViewModel.loadData(ArchivesInfo)</text>
+<text x="950.0" y="891.35" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">更新视频详情及互动状态的 LiveData</text>
+<polyline points="950,930 950,970 430,970 430,1020" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="430,1020 423.88359320410643,1006.3036658953154 436.11640679589357,1006.3036658953154" fill="#222"/>
+<polyline points="950,970 1430,970 1430,1020" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1430,1020 1423.8835932041065,1006.3036658953154 1436.1164067958935,1006.3036658953154" fill="#222"/>
+<rect x="100" y="1020" width="660" height="115" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="430.0" y="1058.65" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">Activity 的详情观察者收到更新</text>
+<text x="430.0" y="1096.35" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">读取 video_file，调用播放器 play(url)</text>
+<rect x="1110" y="1020" width="640" height="115" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1430.0" y="1058.65" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">ViewModel 调用 Model.InsertData</text>
+<text x="1430.0" y="1096.35" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">按当前用户与视频构造浏览记录</text>
+<polyline points="430,1135 430,1190" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="430,1190 423.88359320410643,1176.3036658953154 436.11640679589357,1176.3036658953154" fill="#222"/>
+<rect x="100" y="1190" width="660" height="125" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="430.0" y="1214.8" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">ExoPlayer 设置 MediaItem</text>
+<text x="430.0" y="1252.5" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">prepare() → play()</text>
+<text x="430.0" y="1290.2" font-family="SimSun,serif" font-size="29" text-anchor="middle" dominant-baseline="central">同时触发评论首屏请求</text>
+<polyline points="1430,1135 1430,1190" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1430,1190 1423.8835932041065,1176.3036658953154 1436.1164067958935,1176.3036658953154" fill="#222"/>
+<rect x="1110" y="1190" width="640" height="95" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1430.0" y="1219.3" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">工作线程查询 Room</text>
+<text x="1430.0" y="1255.7" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">条件：user_id 与 video_id</text>
+<polyline points="1430,1285 1430,1320" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1430,1320 1423.8835932041065,1306.3036658953154 1436.1164067958935,1306.3036658953154" fill="#222"/>
+<polyline points="1430,1320.0 1660.0,1385 1430,1450.0 1200.0,1385 1430,1320.0" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1430,1320.0 1660.0,1385 1430,1450.0 1200.0,1385" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1430" y="1385.0" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">记录是否已存在？</text>
+<polyline points="1200,1385 1080,1385 1080,1490" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1080,1490 1073.8835932041065,1476.3036658953154 1086.1164067958935,1476.3036658953154" fill="#222"/>
+<rect x="1123.5" y="1344.0" width="33.0" height="28.0" fill="white"/>
+<text x="1140" y="1358.0" font-family="SimSun,serif" font-size="25" text-anchor="middle" dominant-baseline="central">是</text>
+<polyline points="1660,1385 1780,1385 1780,1490" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1780,1490 1773.8835932041065,1476.3036658953154 1786.1164067958935,1476.3036658953154" fill="#222"/>
+<rect x="1703.5" y="1343.75" width="33.0" height="28.5" fill="white"/>
+<text x="1720" y="1358.0" font-family="SimSun,serif" font-size="25" text-anchor="middle" dominant-baseline="central">否</text>
+<rect x="900" y="1490" width="360" height="85" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1080.0" y="1532.5" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">仅更新 view_time</text>
+<rect x="1600" y="1490" width="360" height="85" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1780.0" y="1532.5" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">插入新记录</text>
+<text x="430" y="1372.45" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">播放与历史写入为两条分支</text>
+<text x="430" y="1407.55" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">详情访问成功后保存浏览记录</text>
+<rect x="70" y="1640" width="1780" height="195" fill="#fafafa" stroke="#222" stroke-width="1.5"/>
+<text x="960" y="1667.0" font-family="SimHei,serif" font-size="28" text-anchor="middle" dominant-baseline="central">生命周期控制　按页面事件触发对应操作</text>
+<rect x="95" y="1705" width="360" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="275.0" y="1736.8" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">onStart</text>
+<text x="275.0" y="1773.2" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">允许播放</text>
+<rect x="500" y="1705" width="395" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="697.5" y="1736.8" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">onPause / onStop</text>
+<text x="697.5" y="1773.2" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">暂停播放器</text>
+<rect x="940" y="1705" width="385" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1132.5" y="1736.8" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">onDestroy</text>
+<text x="1132.5" y="1773.2" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">停止并释放播放器</text>
+<rect x="1370" y="1705" width="450" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1595.0" y="1736.8" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">onNewIntent</text>
+<text x="1595.0" y="1773.2" font-family="SimSun,serif" font-size="28" text-anchor="middle" dominant-baseline="central">更新 id，重新请求详情</text>
+</svg>

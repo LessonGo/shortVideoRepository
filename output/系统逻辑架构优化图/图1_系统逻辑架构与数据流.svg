@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1500" viewBox="0 0 1800 1500"><rect width="100%" height="100%" fill="white"/>
+<text x="900" y="42.0" font-family="SimHei,serif" font-size="40" text-anchor="middle" dominant-baseline="central">系统逻辑架构与数据交互</text>
+<rect x="480" y="95" width="840" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="124.85" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">app　MainActivity</text>
+<text x="900.0" y="165.15" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">底部导航与页面容器</text>
+<rect x="480" y="285" width="840" height="135" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="332.35" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">界面层　Activity / Fragment</text>
+<text x="900.0" y="372.65" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">首页　广场　发现　个人中心　播放页</text>
+<rect x="480" y="525" width="840" height="115" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="562.35" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">状态层　ViewModel</text>
+<text x="900.0" y="602.65" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">业务状态、LiveData 与界面通知</text>
+<rect x="480" y="745" width="840" height="115" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="782.35" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">数据访问层　各业务 Model</text>
+<text x="900.0" y="822.65" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">组装参数、调用接口与本地记录操作</text>
+<rect x="480" y="985" width="840" height="115" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="1022.35" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">网络访问层　ApiService / ApiCall</text>
+<text x="900.0" y="1062.65" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">Retrofit + OkHttp + Gson</text>
+<rect x="480" y="1250" width="840" height="100" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="1279.85" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">远程接口服务</text>
+<text x="900.0" y="1320.15" font-family="SimSun,serif" font-size="31" text-anchor="middle" dominant-baseline="central">视频列表与详情、用户资料、评论、点赞和收藏</text>
+<polyline points="900,195 900,285" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="900,285 893.8835932041064,271.30366589531536 906.1164067958936,271.30366589531536" fill="#222"/>
+<rect x="779.0" y="226.0" width="242.0" height="30.0" fill="white"/>
+<text x="900" y="241.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">ARouter 路由与参数</text>
+<polyline points="660,420 660,525" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="660,525 653.8835932041064,511.30366589531536 666.1164067958936,511.30366589531536" fill="#222"/>
+<rect x="604.0" y="457.5" width="112.0" height="30.0" fill="white"/>
+<text x="660" y="472.5" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">用户操作</text>
+<polyline points="1140,525 1140,420" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1140,420 1146.1164067958935,433.69633410468464 1133.8835932041065,433.69633410468464" fill="#222"/>
+<rect x="993.0" y="457.75" width="294.0" height="29.5" fill="white"/>
+<text x="1140" y="472.5" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">LiveData / DataBinding</text>
+<polyline points="660,640 660,745" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="660,745 653.8835932041064,731.3036658953154 666.1164067958936,731.3036658953154" fill="#222"/>
+<rect x="578.0" y="677.5" width="164.0" height="30.0" fill="white"/>
+<text x="660" y="692.5" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">请求业务数据</text>
+<polyline points="1140,745 1140,640" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1140,640 1146.1164067958935,653.6963341046846 1133.8835932041065,653.6963341046846" fill="#222"/>
+<rect x="1038.5" y="677.5" width="203.0" height="30.0" fill="white"/>
+<text x="1140" y="692.5" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">回调 / 状态结果</text>
+<polyline points="660,860 660,985" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="660,985 653.8835932041064,971.3036658953154 666.1164067958936,971.3036658953154" fill="#222"/>
+<rect x="591.0" y="907.5" width="138.0" height="30.0" fill="white"/>
+<text x="660" y="922.5" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">参数与令牌</text>
+<polyline points="1140,985 1140,860" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1140,860 1146.1164067958935,873.6963341046846 1133.8835932041065,873.6963341046846" fill="#222"/>
+<rect x="1058.0" y="907.5" width="164.0" height="30.0" fill="white"/>
+<text x="1140" y="922.5" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">业务数据对象</text>
+<polyline points="660,1100 660,1250" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="660,1250 653.8835932041064,1236.3036658953154 666.1164067958936,1236.3036658953154" fill="#222"/>
+<rect x="597.5" y="1160.0" width="125.0" height="30.0" fill="white"/>
+<text x="660" y="1175.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">HTTP 请求</text>
+<polyline points="1140,1250 1140,1100" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1140,1100 1146.1164067958935,1113.6963341046846 1133.8835932041065,1113.6963341046846" fill="#222"/>
+<rect x="1077.5" y="1159.5" width="125.0" height="31.0" fill="white"/>
+<text x="1140" y="1175.0" font-family="SimSun,serif" font-size="26" text-anchor="middle" dominant-baseline="central">JSON 响应</text>
+<rect x="40" y="285" width="340" height="355" fill="#f7f7f7" stroke="#222" stroke-width="1.5"/>
+<text x="210.0" y="374.75" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">公共支撑</text>
+<text x="210.0" y="409.85" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">library_base</text>
+<text x="210.0" y="444.95" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central"></text>
+<text x="210.0" y="480.05" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">BaseActivity / Fragment</text>
+<text x="210.0" y="515.15" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">ARouter 路由</text>
+<text x="210.0" y="550.25" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">EventBus 登录事件</text>
+<polyline points="380,350 480,350" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="10 7"/>
+<polygon points="480,350 466.30366589531536,356.11640679589357 466.30366589531536,343.88359320410643" fill="#222"/>
+<polyline points="380,580 480,580" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="10 7"/>
+<polygon points="480,580 466.30366589531536,586.1164067958936 466.30366589531536,573.8835932041064" fill="#222"/>
+<rect x="40" y="985" width="340" height="115" fill="#f7f7f7" stroke="#222" stroke-width="1.5"/>
+<text x="210.0" y="1024.95" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">数据模型　video_data</text>
+<text x="210.0" y="1060.05" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">响应对象与业务实体</text>
+<polyline points="380,1040 480,1040" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="10 7"/>
+<polygon points="480,1040 466.30366589531536,1046.1164067958935 466.30366589531536,1033.8835932041065" fill="#222"/>
+<rect x="1435" y="670" width="325" height="155" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1597.5" y="712.4" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">UserManager</text>
+<text x="1597.5" y="747.5" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">加密偏好存储</text>
+<text x="1597.5" y="782.6" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">token 与用户资料</text>
+<polyline points="1320,790 1435,790" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1435,790 1421.3036658953154,796.1164067958936 1421.3036658953154,783.8835932041064" fill="#222"/>
+<rect x="1352.0" y="797.0" width="56.0" height="28.0" fill="white"/>
+<text x="1380" y="811.0" font-family="SimSun,serif" font-size="24" text-anchor="middle" dominant-baseline="central">读写</text>
+<polyline points="1435,700 1370,700 1370,755 1320,755" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="10 7"/>
+<polygon points="1320,755 1333.6963341046846,748.8835932041064 1333.6963341046846,761.1164067958936" fill="#222"/>
+<rect x="1435" y="945" width="325" height="155" fill="white" stroke="#222" stroke-width="1.5"/>
+<text x="1597.5" y="987.4" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">Room 本地数据库</text>
+<text x="1597.5" y="1022.5" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">浏览记录</text>
+<text x="1597.5" y="1057.6" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">查询、插入、更新、删除</text>
+<polyline points="1320,820 1395,820 1395,975 1435,975" fill="none" stroke="#222" stroke-width="1.5"/>
+<polygon points="1435,975 1421.3036658953154,981.1164067958936 1421.3036658953154,968.8835932041064" fill="#222"/>
+<rect x="1406.0" y="857.5" width="108.0" height="29.0" fill="white"/>
+<text x="1460" y="872.0" font-family="SimSun,serif" font-size="25" text-anchor="middle" dominant-baseline="central">记录操作</text>
+<polyline points="1435,1060 1355,1060 1355,835 1320,835" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="10 7"/>
+<polygon points="1320,835 1333.6963341046846,828.8835932041064 1333.6963341046846,841.1164067958936" fill="#222"/>
+<text x="1600" y="1145.0" font-family="SimSun,serif" font-size="25" text-anchor="middle" dominant-baseline="central">查询结果由回调返回界面</text>
+<text x="900" y="1430.0" font-family="SimSun,serif" font-size="27" text-anchor="middle" dominant-baseline="central">实线：操作或请求及网络响应　　虚线：公共支撑、模型映射或本地结果返回</text>
+</svg>

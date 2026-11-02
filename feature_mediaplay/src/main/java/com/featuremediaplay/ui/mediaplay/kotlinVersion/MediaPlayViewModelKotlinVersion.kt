@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.video_data.bean.ArchivesInfo
 import com.example.video_data.bean.ResComment
 import com.example.video_data.bean.ResVideoAllInfo
-import com.featuremediaplay.api.apiKotlinVersion.MediaApiServiceProvider
 
 import com.libase.base.BaseViewmodel
 import com.libase.manager.UserManager
@@ -63,7 +62,7 @@ class MediaPlayViewModelKotlinVersion : BaseViewmodel() {
         viewModelScope.launch {
             showLoading(true)
             val result = mModel.RequestVideoInfo(id)
-            Log.d(TAG,"result: " + result + "token: " + MediaApiServiceProvider.getInstance().getVideoInfo(id, UserManager.getInstance().getUserToken()))
+            Log.d(TAG,"result: $result")
             when (result) {
                 is NetworkStatusResult.Empty -> showToastText(result.msg ?: "没有数据了")
                 is NetworkStatusResult.Error -> showToastText(result.errorMessage ?: "网络异常")
